@@ -11,6 +11,9 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "paths": {
+      "ramses": ["./dist/ramses"]
+    },
     "target": "ES2022",
     "module": "preserve"
   },
@@ -19,5 +22,13 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/ramses/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ramses/tsconfig.spec.json"
+    }
+  ]
 }
