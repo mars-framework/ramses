@@ -1,0 +1,48 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+
+$duration: .1s;
+
+:host {
+  display: block;
+}
+
+@keyframes tooltip-anim {
+  from {
+    opacity: 0;
+    transform: scaleX(50%) scaleY(0) translateY(-100%);
+  }
+}
+
+.tooltip-panel {
+  background: #333;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  max-width: 250px;
+  white-space: normal;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: tooltip-anim $duration ease-in-out;
+
+  /*opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 150ms ease, transform 150ms ease;*/
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.hiding {
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 120ms ease, transform 120ms ease;
+    background: deeppink;
+  }
+}
+
+.close-tooltip {
+  animation: tooltip-anim $duration ease-out reverse;
+}

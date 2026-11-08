@@ -1,8 +1,9 @@
 {
-  "name": "ramses",
+  "name": "@mars/ramses",
   "version": "0.0.1",
   "type": "module",
   "peerDependencies": {
+    "@angular/aria": "^22.2.0",
     "@angular/common": "^22.2.0",
     "@angular/core": "^22.2.0"
   },
